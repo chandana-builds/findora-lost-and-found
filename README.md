@@ -3,6 +3,8 @@
 # 🔍 Findora — Lost & Found Portal
 ### *"Lost something? Let's bring it back."*
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-findora--lost--and--found.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://findora-lost-and-found.netlify.app/)
+
 [![React](https://img.shields.io/badge/React-19.3.1-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -13,7 +15,9 @@
 
 A modern, production-ready, full-stack Lost & Found web portal connecting students, staff, visitors, patients, and community members with their misplaced belongings through community-driven notices, smart algorithmic cross-referencing, and two-tier ownership verification.
 
-[Features](#-features) • [Architecture](#-architecture) • [Matching Engine](#-smart-matching-engine) • [Deployment Guide](#-where-to-deploy) • [Getting Started](#-getting-started) • [Database Setup](#-database--supabase-setup)
+🚀 **Live Portal**: [https://findora-lost-and-found.netlify.app/](https://findora-lost-and-found.netlify.app/)
+
+[Live Demo](https://findora-lost-and-found.netlify.app/) • [Features](#-features) • [Architecture](#-architecture) • [Matching Engine](#-smart-matching-engine) • [Deployment Guide](#-where-to-deploy) • [Getting Started](#-getting-started) • [Database Setup](#-database--supabase-setup)
 
 ---
 
@@ -112,27 +116,18 @@ Matches scoring **≥ 35%** are registered as potential matches, alerting both t
 
 Findora is a Single Page Application (SPA) with a lightweight, optimized build (`dist/`). You can deploy it to any of the following platforms in minutes:
 
-### Option 1: Vercel (Recommended — Free & Instant)
-1. Push your code to GitHub (see [Pushing to GitHub](#-pushing-to-github)).
-2. Log in to [Vercel](https://vercel.com) and click **"Add New Project"**.
-3. Import your GitHub repository: `findora-lost-and-found`.
-4. Vercel automatically detects Vite:
-   - **Framework Preset**: `Vite`
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-5. *(Optional)* Add your Supabase environment variables under **Environment Variables**:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
-6. Click **Deploy**. Your site will be live on a `*.vercel.app` URL with automatic SSL.
+### Option 1: Netlify (Active Production Deployment)
+🌐 **Live URL**: [https://findora-lost-and-found.netlify.app/](https://findora-lost-and-found.netlify.app/)
 
-### Option 2: Netlify
 1. Log in to [Netlify](https://netlify.com) and select **"Add new site"** → **"Import an existing project"**.
-2. Select your GitHub repository.
+2. Select your GitHub repository (`chandana-builds/findora-lost-and-found`).
 3. Configure build settings:
    - **Build command**: `npm run build`
    - **Publish directory**: `dist`
 4. Notice that Findora includes [`public/_redirects`](file:///c:/Users/LENOVO/OneDrive/Desktop/Findora/public/_redirects) (`/* /index.html 200`) so all client-side routes (`/browse`, `/items/:id`, etc.) resolve seamlessly without 404s.
 5. Click **Deploy site**.
+
+### Option 2: Vercel
 
 ### Option 3: Cloudflare Pages
 1. In the Cloudflare Dashboard, go to **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
